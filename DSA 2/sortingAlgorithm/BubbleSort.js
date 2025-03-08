@@ -12,7 +12,7 @@ function bubleSort(arr){
         }
     }while(swapped)
 }
-const arr = [6,7,3,-1,3,-2,9]
+const arr =["banana", "apple", "grape", "cherry", "mango"];
 bubleSort(arr)
 console.log(arr)
 
