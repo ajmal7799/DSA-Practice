@@ -164,11 +164,11 @@ class QueueUsingStack {
         }
         if (this.stack2.length == 0) {
             while (this.stack1.length > 0) {
-                this.stack2.push(this.stack1.pop())
+                this.stack2.push(this.stack1.pop()) 
             }
         }
         return this.stack2.pop()
-    }
+    } 
 
     print() {
         console.log("queue:", [...this.stack2.reverse(), ...this.stack1])
