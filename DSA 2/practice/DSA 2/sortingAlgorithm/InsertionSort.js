@@ -1,4 +1,5 @@
 
+
 function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++) {
         let temp = arr[i]
@@ -14,6 +15,6 @@ function insertionSort(arr) {
 
 }
 
-const arr = [9, 7, 4, 6, 1, 5, 3];
+const arr = [2, 7, 4, 6, 1, 5, 3];
 insertionSort(arr)
 console.log(arr)

@@ -13,8 +13,9 @@ function mergeSort(arr) {
     return merge(mergeSort(leftArr), mergeSort(rightArr))
 }
 
-
 function merge(leftArr, rightArr) {
+
+
     const sortedArr = []
 
     while (leftArr.length && rightArr.length) {
@@ -31,3 +32,5 @@ function merge(leftArr, rightArr) {
 }
 
 console.log(mergeSort(arr));
+
+
