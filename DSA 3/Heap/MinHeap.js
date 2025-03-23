@@ -68,7 +68,20 @@ class MinHeap {
         return root
     }
 
+    heapSort(arr) {
+        const minheap = new MinHeap()
+        const result = []
 
+        for (let value of arr) {
+            minheap.insert(value)
+        }
+
+        while (minheap.heap.length > 0) {
+            result.push(minheap.remove())
+        }
+
+        return result
+    }
 
 
 
@@ -86,4 +99,6 @@ min.insert(3);
 min.insert(4);
 min.insert(5);
 min.remove()
+let arr = [4, 6, 7, 8, 9, 1, 2]
+console.log(min.heapSort(min.heap))
 min.printHeap()
