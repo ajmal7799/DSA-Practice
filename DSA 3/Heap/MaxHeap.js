@@ -61,7 +61,7 @@ class MaxHeap {
 
         const root = this.heap[0]
         this.heap[0] = this.heap.pop()
-        this.heapifyDown(0)
+        this.heapifyDown(0) 
 
         return root
     }
