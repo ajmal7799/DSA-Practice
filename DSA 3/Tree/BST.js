@@ -53,6 +53,8 @@ class BinarySearchTree {
     }
   }
 
+  // dfs
+
   preOrder(root) {
     if (root) {
       console.log(root.value)
@@ -77,6 +79,7 @@ class BinarySearchTree {
     }
   }
 
+  // BFS traversal
   levelOrder() {
     let queue = []
     queue.push(this.root)
@@ -137,9 +140,38 @@ class BinarySearchTree {
     return root
   }
 
+  findLargest() {
+    let count = 0
+    let largest = null
+    function inOrder(root) {
+      if (!root) return
+
+      inOrder(root.right)
+      count++
+      if (count == 3) {
+        largest = root.value
+        return
+      }
+      inOrder(root.left)
+    }
+
+    inOrder(this.root)
+    return largest
+  }
+
+  height(root) {
+    if (!root) {
+      return -1
+    }
+    let leftHeight = this.height(root.left)
+    let rightHeight = this.height(root.right)
+    return Math.max(leftHeight, rightHeight) + 1
+  }
+
 
 
 }
+
 const bst = new BinarySearchTree()
 console.log("Tree is empty", bst.isEmpty())
 

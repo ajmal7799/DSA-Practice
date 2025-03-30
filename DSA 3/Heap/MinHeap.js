@@ -98,7 +98,7 @@ min.insert(2);
 min.insert(3);
 min.insert(4);
 min.insert(5);
-min.remove()
+// min.remove()
 let arr = [4, 6, 7, 8, 9, 1, 2]
 console.log(min.heapSort(min.heap))
-min.printHeap()
+min.print()

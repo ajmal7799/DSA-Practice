@@ -71,6 +71,15 @@ class Trie {
 
     }
 
+    printallLeafNode(root){
+        if(!root) return 
+        if(!root.left && !root.right){
+            console.log(root.value)
+        }
+        this.printallLeafNode(root.left)
+        this.printallLeafNode(root.right)
+    }
+
 
 }
 const trie = new Trie();
